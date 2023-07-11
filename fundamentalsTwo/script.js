@@ -48,4 +48,28 @@ function fruitProcessor(apples, oranges) {
 };    
 
 console.log(fruitProcessor(2,3));
- 
+
+//Arrays 
+const friends = ['Rick', 'Jerry', 'Morty'];
+console.log(friends);
+
+friends.push('Bird person');
+console.log(friends);
+
+//push to front of array
+friends.unshift('Fart');
+console.log(friends);
+
+//remove
+// friends.pop(); // last elemnet, no argumanet needed
+const popped = friends.pop(); // a way to save popped value, could be used in a "undo" feature. 
+console.log(friends);
+console.log('popped', popped);
+
+const shifted = friends.shift();
+console.log(friends);
+console.log('shifted', shifted);
+
+console.log(friends.indexOf('Morty'));
+console.log(friends.includes('Mr. Poopy Butthole')); // checks for value 
+
