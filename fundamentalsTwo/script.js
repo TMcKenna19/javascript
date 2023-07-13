@@ -77,7 +77,7 @@ console.log(friends.includes('Mr. Poopy Butthole')); // checks for value
  * Objects 
  */
 
-const person = {
+const person =  {
     firstName : 'Rick',
     lastName : 'Sanchez',
     job : 'Scientist',
@@ -95,3 +95,13 @@ const person = {
 };
 
 console.log(person.calcAge());
+
+
+let diceOne = Math.trunc(Math.random() * 6 + 1); // Math.random() * 6 then Math.trunc() chopps off the decimal
+
+
+let diceTwo = Math.trunc(Math.random() * 6 + 1); // +1 to reach 6 
+
+
+let roll = (diceOne + diceTwo);
+console.log(`{${diceOne}, ${diceTwo}} rolled a ${roll}`);
