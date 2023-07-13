@@ -73,3 +73,25 @@ console.log('shifted', shifted);
 console.log(friends.indexOf('Morty'));
 console.log(friends.includes('Mr. Poopy Butthole')); // checks for value 
 
+/**
+ * Objects 
+ */
+
+const person = {
+    firstName : 'Rick',
+    lastName : 'Sanchez',
+    job : 'Scientist',
+    birthYear : 1954,
+    friends : ['Morty', 'Mr Poopybutthole', 'Birdperson'],
+    hasDriversLicense : true,
+
+    calcAge: function() {
+        this.age = 2023 - this.birthYear;
+        return this.age;
+    } 
+
+    
+    
+};
+
+console.log(person.calcAge());
