@@ -1,12 +1,12 @@
 // Function Declaration, a function that can be used before its declared 
-function calAge(birthYear){
+function calAge(birthYear) {
     return 2023 - birthYear;
 }
 
 console.log(calAge(1986));
 
 // Function  Expression, a function value stored in a variable 
-const calAge = function(birthYear) {
+const calAge = function (birthYear) {
     return 2023 - birthYear;
 };
 
@@ -17,15 +17,15 @@ const arrowAge = (birthYear) => 2023 - birthYear;
 console.log(arrowAge(2013));
 
 
-const untilRetirement = function(birthYear) {
-    const age = 2023 - birthYear; 
+const untilRetirement = function (birthYear) {
+    const age = 2023 - birthYear;
     const years = 65 - age;
     const retirement = `${years} year(s) until retirement`;
     const cheers = `How has retirement been treating you?`;
 
-    if(years > 0) {
+    if (years > 0) {
         return retirement;
-    }else {
+    } else {
         return cheers;
     };
 
@@ -35,8 +35,8 @@ console.log(untilRetirement(1923));
 
 
 // calling a function in a function 
-const cutPieces = function(fruit) {
-    return fruit * 4; 
+const cutPieces = function (fruit) {
+    return fruit * 4;
 };
 
 function fruitProcessor(apples, oranges) {
@@ -45,9 +45,9 @@ function fruitProcessor(apples, oranges) {
     const juice = `Juice with ${applePieces} pieces of apple and ${orangePieces} pieces of orange.`;
 
     return juice;
-};    
+};
 
-console.log(fruitProcessor(2,3));
+console.log(fruitProcessor(2, 3));
 
 //Arrays 
 const friends = ['Rick', 'Jerry', 'Morty'];
@@ -77,21 +77,21 @@ console.log(friends.includes('Mr. Poopy Butthole')); // checks for value
  * Objects 
  */
 
-const person =  {
-    firstName : 'Rick',
-    lastName : 'Sanchez',
-    job : 'Scientist',
-    birthYear : 1954,
-    friends : ['Morty', 'Mr Poopybutthole', 'Birdperson'],
-    hasDriversLicense : true,
+const person = {
+    firstName: 'Rick',
+    lastName: 'Sanchez',
+    job: 'Scientist',
+    birthYear: 1954,
+    friends: ['Morty', 'Mr Poopybutthole', 'Birdperson'],
+    hasDriversLicense: true,
 
-    calcAge: function() {
+    calcAge: function () {
         this.age = 2023 - this.birthYear;
         return this.age;
-    } 
+    }
 
-    
-    
+
+
 };
 
 console.log(person.calcAge());
