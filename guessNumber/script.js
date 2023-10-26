@@ -2,6 +2,7 @@
 
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
 let score = 5; 
+let highScore = 0; 
 
 document.querySelector('.check').addEventListener('click', function() {
     const guess = Number(document.querySelector('.guess').value);
@@ -15,8 +16,10 @@ document.querySelector('.check').addEventListener('click', function() {
         document.querySelector('body').style.backgroundColor = '#60b347';
         document.querySelector('.number').textContent = secretNumber;
         document.querySelector('.number').style.width = '30rem';
-        score++;
-        document.querySelector('.score').textContent = score;
+        if(score > highScore) {
+            highScore = score;
+            document.querySelector('.highscore').textContent = highScore;
+        }
 
        
         /** guess too high */
@@ -55,10 +58,3 @@ document.querySelector('.again').addEventListener('click', function() {
     document.querySelector('body').style.backgroundColor = '#222';
     document.querySelector('.number').style.width = '15rem';   
 })
-
-/**
- * [x] Select the element with "again" class and attach a clickHandler.
- * [] In the handler fucntion, restore initial values of the score and number variables.
- * [] Resote the initial conditions of the message, number, score and guess input feild. 
- * [x] restore the original backgorund color #222 and number with 15rem 
- */
