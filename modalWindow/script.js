@@ -2,24 +2,35 @@
     /** put classes into variable */
 const modal = document.querySelector('.modal');
 const overlay = document.querySelector('.overlay');
-const closeModal = document.querySelector('.close-modal');
-const openModal = document.querySelectorAll('.show-modal')
+const btnCloseModal = document.querySelector('.close-modal');
+const btnOpenModal = document.querySelectorAll('.show-modal');
 
-for(let i = 0; i < openModal.length; i++){
-    openModal[i].addEventListener('click', function() {
-        modal.classList.remove('hidden');
-        overlay.classList.remove('hidden');
-    });
-}
+const openModal = function() {
+    modal.classList.remove('hidden');
+    overlay.classList.remove('hidden');
+};
 
-    /** close modal with x  */
-closeModal.addEventListener('click', function(){
+const closeModal =  function() {
     modal.classList.add('hidden');
     overlay.classList.add('hidden');
-});
+};
 
-    /** click outside modal close */
-overlay.addEventListener('click', function() {
-    modal.classList.add('hidden');
-    overlay.classList.add('hidden');
-});
+for(let i = 0; i < btnOpenModal.length; i++){
+    btnOpenModal[i].addEventListener('click', openModal);
+};
+
+    /** close modal with x DRY declare closeModal in event listener*/
+btnCloseModal.addEventListener('click', closeModal);
+overlay.addEventListener('click', closeModal);
+
+
+// old repetitive
+// closeModal.addEventListener('click', function(){
+//     modal.classList.add('hidden');
+//     overlay.classList.add('hidden');
+// });
+
+// overlay.addEventListener('click', function() {
+//     modal.classList.add('hidden');
+//     overlay.classList.add('hidden');
+// });
