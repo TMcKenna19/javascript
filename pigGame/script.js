@@ -42,8 +42,8 @@ btnRoll.addEventListener('click', function () {
             document.getElementById(`current--${activePlayer}`).textContent = currentScore;
         } else {
             switchPlayer();
-        }
-    }
+        };
+    };
 });
 
 // Hold Score
@@ -55,8 +55,9 @@ btnHold.addEventListener('click', function () {
             playing = false;
             document.querySelector(`.player--${activePlayer}`).classList.add('player--winner');
             document.querySelector(`.player--${activePlayer}`).classList.remove('player--active');
+            document.getElementById(`name--${activePlayer}`).textContent = 'Winner';
         } else {
             switchPlayer();
-        }
-    }
-})
+        };
+    };
+});
