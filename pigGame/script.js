@@ -22,24 +22,23 @@ let activePlayer = 0;
 let playing = true;
 
 const resetConditions = function () {
-    diceEl.classList.add('hidden');
-    document.querySelector(`.player--${activePlayer}`).classList.remove('player--winner');
-    player0El.classList.remove('player--winner');
-    player1El.classList.remove('player--winner');
-    player0El.classList.remove('player--active');
-    player1El.classList.remove('player--active');
-    player0El.classList.add('player--active');
+    diceEl.classList.add('hidden'); // hides dice 
+    player0El.classList.remove('player--winner'); // removes player 0 winner black background
+    player1El.classList.remove('player--winner'); // removes player 1 winner black background
+    player0El.classList.remove('player--active'); // removes active player 0 (could be deleted?)
+    player1El.classList.remove('player--active'); // removes active player 1 
+    player0El.classList.add('player--active'); // sets player 0 to active 
+    document.getElementById('name--0').textContent = 'Player 1';
+    document.getElementById('name--1').textContent = 'Player 2';
     score0El.textContent = 0;
     score1El.textContent = 0;
     current0El.textContent = 0;
     current1El.textContent = 0; 
-    diceEl.classList.add('hidden');
     scores = [0, 0];
     currentScore = 0;
     activePlayer = 0;
     playing = true;
 };
-/** Winner not changing back to Player  */
 
 const switchPlayer = function () {
     document.getElementById(`current--${activePlayer}`).textContent = 0;
@@ -69,7 +68,7 @@ btnHold.addEventListener('click', function () {
     if (playing) {
         scores[activePlayer] += currentScore;
         document.getElementById(`score--${activePlayer}`).textContent = scores[activePlayer];
-        diceEl.classList.add('hidden'); //<---
+        diceEl.classList.add('hidden');
         if (scores[activePlayer] >= 10) {
             playing = false;
             diceEl.classList.add('hidden');
