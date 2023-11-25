@@ -16,7 +16,7 @@ const btnHold = document.querySelector('.btn--hold');
 score0El.textContent = 0;
 score1El.textContent = 0;
 diceEl.classList.add('hidden');
-let scores = [0, 0]; // <-- const to let 
+let scores = [0, 0]; 
 let currentScore = 0;
 let activePlayer = 0;
 let playing = true;
@@ -25,11 +25,10 @@ const resetConditions = function () {
     diceEl.classList.add('hidden'); // hides dice 
     player0El.classList.remove('player--winner'); // removes player 0 winner black background
     player1El.classList.remove('player--winner'); // removes player 1 winner black background
-    player0El.classList.remove('player--active'); // removes active player 0 (could be deleted?)
     player1El.classList.remove('player--active'); // removes active player 1 
     player0El.classList.add('player--active'); // sets player 0 to active 
-    document.getElementById('name--0').textContent = 'Player 1';
-    document.getElementById('name--1').textContent = 'Player 2';
+    document.getElementById('name--0').textContent = 'Player 1'; // replaces winner w/ player 1 
+    document.getElementById('name--1').textContent = 'Player 2'; // replaces winner w/ plaer 2
     score0El.textContent = 0;
     score1El.textContent = 0;
     current0El.textContent = 0;
@@ -84,17 +83,4 @@ btnHold.addEventListener('click', function () {
 // New Game 
 btnNew.addEventListener('click', function () {
     resetConditions();
-    // diceEl.classList.add('hidden');
-    // player0El.classList.remove('player--winner');
-    // player1El.classList.remove('player--winner');
-    // player0El.classList.add('player--active');
-    // player1El.classList.remove('player--active');
-    // scores = [0, 0];
-    // currentScore = 0;
-    // activePlayer = 0;
-    // playing = true;
-    // score0El.textContent = 0;
-    // score1El.textContent = 0;
-    // current0El = 0;
-    // current1El = 0;
 });
