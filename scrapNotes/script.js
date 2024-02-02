@@ -27,3 +27,15 @@ const person = {
 
 person.calcAge();
 
+const resturant = {
+    Name: 'Mario Italiano',
+    Location: '230 Pike st Marietta, OH 45750',
+    categories: ['Italian', 'Pizza', 'Vegitarian', 'Organic'],
+    starterMenu: ['Focaccia', 'Bruchetta', 'Garlic Bread', 'Caprese Salad'],
+    mainMenu: ['Pizza', 'Pasta', 'Risoto'],
+    order: function( starterIndex, mainIndex ){
+        return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+    }
+}
+
+// console.log(resturant.order(0, 2));
