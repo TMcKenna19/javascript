@@ -49,3 +49,54 @@ const restaurant = {
   // You can only use the spread oparator when building an arrray or pass values into a function
 
 
+  //.reduce()
+// const numbers = [3, 6, 2, 9, 1];
+// const sum  = numbers.reduce((p, c) => {
+//     console.log(`Previous ${p}`);
+//     console.log(`Current ${c}`)
+//     return p + c;
+// }, 0);
+
+// console.log(sum);
+
+
+// const people = [
+//     {
+//         name: 'Dom Perry',
+//         age: 35
+//     },
+//     {
+//         name: 'Andrew Wilkson',
+//         age: 47
+//     },
+//     {
+//         name: 'Brian Walker',
+//         age: 27
+//     }
+// ];
+
+// const oldestAge = people.reduce((p, c) => {
+//     if(c.age > p) {
+//         return c.age;
+//     }
+//     return p
+// }, 0);
+
+// console.log(oldestAge);
+
+// const add = function(...numbers) {
+//     for(i = 0; i < numbers.length; i++){
+//         let sum = 0; 
+//         sum += numbers[i];
+//         console.log(sum)
+//     };
+    
+// }
+// add(2, 3);
+// add(5, 3, 7, 2);
+// add(8, 2, 5, 3, 2, 1, 4);
+
+// const x = [23, 5, 7];
+// add(...x);
+
+
